@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AACA,OAAO,CAAC,+LAAI;AACZ,OAAO,CAAC,8DAAI;AAEZ,ACCA,GDDG,CCCS;EACR,eAAe,EAAE,UAAU;EAC3B,kBAAkB,EAAE,UAAU;EAC9B,UAAU,EAAE,UAAU;CACzB",
+    "sources": [
+        "../scss/setting.scss",
+        "../scss/mixin.scss"
+    ],
+    "names": [],
+    "file": "setting.css"
+}

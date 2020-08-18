@@ -1,15 +1,5 @@
 new WOW().init();
 
-var myFullpage = new fullpage('#fullpage', {
-    anchors: ['01', '02', '03'],
-    sectionsColor: ['#fff', '#fff', '#fff'],
-    navigation: true,
-    navigationPosition: 'right',
-    navigationTooltips: ['01', '02', '03'],
-    scrollBar: true,
-    responsiveWidth: 320
-});
-
 // header&footer載入
 $(function(){
     $("header").append('<h1 class="wow slideInUp" data-wow-duration="1s"><a href="01_index.html"><img src="img/logo_white.png" alt="大睦建設股份有限公司"></a></h1><a class="toggle"><img src="img/icon_menu.svg"></a><nav class="menu"><ul><li class="wow slideInUp" data-wow-duration="1s"><a href="04_aboutUs.html">關於大睦</a></li><li class="wow slideInUp"><a href="02_currentProject.html">熱銷大睦</a></li><li class="wow slideInUp" data-wow-duration="1s"><a href="05_news.html">大睦消息</a></li><li class="wow slideInUp" data-wow-duration="1s"><a href="07_classicProject.html">大睦工程</a></li><li class="wow slideInUp" data-wow-duration="1s"><a href="09_contactUs.html">聯繫我們</a></li><li><a href="https://www.facebook.com/%E5%A4%A7%E7%9D%A6%E5%BB%BA%E8%A8%AD%E6%A9%9F%E6%A7%8B-2553463084879653/" target="_blank"><img class="wow slideInUp" data-wow-duration="1s" src="img/facebook.png" alt="facebook"></a></li></ul><div class="icon-close"><svg id="icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path class="close-rotate" d="M13.41 12l4.3-4.29a1 1 0 1 0-1.42-1.42L12 10.59l-4.29-4.3a1 1 0 0 0-1.42 1.42l4.3 4.29-4.3 4.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l4.29-4.3 4.29 4.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z" /></svg></div></nav>');

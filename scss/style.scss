@@ -344,8 +344,9 @@ html, body{
         &.heightfull{
             min-height: calc(100% - 44px);
             &.classic{ 
-                background: url(../img/classicProject_bg.jpg) center bottom no-repeat #fff;
-                background-size: cover;
+                // background: url(../img/classicProject_bg.jpg) center bottom no-repeat #fff;
+                // background-size: cover;
+                background: #eee;
             }
             &.Contact{
                 background: url(../img/contactUs_bg.jpg) center bottom no-repeat #fff;
@@ -354,6 +355,31 @@ html, body{
         }
         &.pt0{
             padding: 0;
+        }
+        .themeSelect{
+            width: 100%;
+            margin: 50px auto;
+            text-align: center;
+            background-color: #fff;
+            padding: 10px;
+            box-sizing: border-box;
+            &.gray{
+                background-color: #f6f6f6;
+            }
+            li{
+                display: inline-block;
+                text-align: center;
+                padding: 0 30px;
+                border-right: 1px solid #000;
+                &:last-child{
+                    border-right: 0;
+                }
+                &.active{
+                    font-weight: bold;
+                }&:hover{
+                    cursor: pointer;
+                }
+            }
         }
         .themeFull{
             width: 100%;
@@ -755,6 +781,57 @@ html, body{
                                     button{
                                         width: 100%;
                                         @include pd(5px 20px);
+                                    }
+                                }
+                            }
+                        }
+                        &.singleradio{
+                            height: auto;
+                            overflow: hidden;
+                            .itemBox{
+                                width: calc(100%-120px);
+                                float: left;
+                                overflow: hidden;
+                            }
+                            .item{
+                                width: 100%;
+                                float: left;
+                                input[type="radio"]{
+                                    width: 20px;
+                                    height: 20px;
+                                    appearance: unset;
+                                    -moz-appearance: unset;
+                                    -webkit-appearance: unset;
+                                    -ms-appearance: unset;
+                                    margin-right: 10px;
+                                    margin-top: 10px;
+                                    // background-color: transparent;
+                                    // border: 1px solid #000;
+                                    border-radius: 50%;
+                                    float: left;
+                                    position: relative;
+                                    &:before{
+                                        content: "";
+                                        width: 8px;
+                                        height: 8px;
+                                        background-color: #9e7d3e;
+                                        opacity: 1;
+                                        display: block;
+                                        position: absolute;
+                                        left: 6px;
+                                        top: 6px;
+                                        border-radius: 50%;
+                                        opacity: 0;
+                                    }
+                                }
+                                label{
+                                    width: 120px;
+                                    
+                                }
+                                input[type="radio"]:checked{
+                                    outline: 0;
+                                    &:before{
+                                        opacity: 1;
                                     }
                                 }
                             }
@@ -1274,6 +1351,83 @@ html, body{
             &.theme-current{
                 margin-bottom: 5%;
             }
+            .themeIntro__engineering{
+                @media (max-width: 575px){
+                    width: 96%;
+                    margin: 0 auto;
+                }
+                .engineeringBlock{
+                    margin-top: 80px;
+                    .txtBox{
+                        width: 100%;
+                        p{
+                            font-size: 18px;
+                            border-left: 1px solid #000;
+                            padding-left: 15px;
+                            margin: 0;
+                            @media (max-width: 768px){
+                                font-size: 14px;
+                            }
+                            &.tt{
+                                font-size: 28px;
+                                border-left: 0;
+                                padding-left: 0;
+                                @media (max-width: 768px){
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+                    .titleBox{
+                        padding-top: 20px;
+                        overflow: hidden;
+                        > img{
+                            width: auto;
+                            max-width: 215px;
+                            margin-right: 20px;
+                            float: left;
+                        }
+                        .txtBox{
+                            width: calc( 100% - 240px);
+                            float: left;
+                            @media (max-width: 768px){
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .imgBox{
+                        margin: 30px auto;
+                    }
+                    .listBox{
+                        ul{
+                            overflow: hidden;
+                            li{
+                                width: calc(94%/4);
+                                float: left;
+                                margin-right: 2%;
+                                &:last-child{
+                                    margin-right: 0;
+                                }
+                                @media (max-width: 768px){
+                                    width: calc(95%/2);
+                                    margin-right: 5%;
+                                    &:nth-child(2n){
+                                        margin-right: 0;
+                                    }
+                                }
+                            }
+                        }
+                        p.tt span{ 
+                            font-size: 1rem;
+                            padding-left: 10px;
+                            @media (max-width: 575px){
+                                display: block;
+                                padding-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
         }
         // 首頁最新消息
         .theme-news{
@@ -1332,10 +1486,11 @@ html, body{
             z-index: 5;
             background: url(../img/about_bg.png) center 84px no-repeat;
             background-size: cover;
-            // overflow: hidden;
             .pc{ display: block;}
             .mob{ display: none;}
             @media (max-width:991px){
+                background: url(../img/mob_about_bg.png) center 84px no-repeat;
+                background-size: cover;
                 .pc{ display: none;}
                 .mob{ display: block;}
             }
@@ -1387,114 +1542,139 @@ html, body{
         .theme-aboutUs{
             width: 100%;
             position: relative;
-            // margin-top: -10%;
             z-index: 0;
-            // padding-bottom: 0;
-            // padding-top: 10%;
             background: url(../img/contactUs_bg.png) 0 0 no-repeat;
             background-size: cover;
+            padding: 0;
             @media (max-width:991px){
-                padding-top: 50%;
+                background: url(../img/mob_contactUs_bg.jpg) center 0 no-repeat;
+                background-size: cover;
+                
+            }
+            p.sign{
+                position: absolute;
+                bottom: 20px;
+                left: 47%;
+                .pc{ display: block;}
+                .mob{ display: none;}
+                @media (max-width:991px){
+                    right: 10px;
+                    left: auto;
+                    .pc{ display: none;}
+                    .mob{ display: block;}
+                }
+                @media (max-width:600px){
+                    width: 36%;
+
+                }
             }
             .themeContent{
+                @media (max-width:991px){
+                    height: 0;
+                    padding-bottom: 50%;
+                }
+                @media (max-width:767px){
+                    height: 0;
+                    padding-bottom: 65%;
+                }
+                @media (max-width:600px){
+                    width: 90%;
+                    margin: 0 auto;
+
+                }
                 .themeContent__AboutUs{
-                    .themeContent__AboutUs__Chairman{
-                        width: 40%;
-                        @media (max-width:991px){
-                            width: 100%;
-                            margin-left: -27%;
-                        }
-                        @media (max-width:767px){
-                            margin-left: -15%;
-                        }
-                        @media (max-width:600px){
-                            margin-left: -10%;
-                        }
-                    }
                     .themeContent__AboutUs__Culture{
                         width: 511px;
                         position: absolute;
-                        top: 50%;
+                        top: 30%;
                         transform: translateY(-50%);
                         left: 45%;
+                        text-align: left;
                         @media (max-width:991px){
-                            width: 90%;
-                            top: -50%;
+                            width: 100%;
+                            top: -80%;
                             left: 50%;
                             transform: translateX(-50%);
-                            font-size: $font-size * 3;
+                            font-size: $font-size * 1.6;
                             vertical-align: top;
                         }
                         @media (max-width:767px){
-                            font-size: 3.6vw;
+                            font-size: 3vw;
                         }
-                        @media (max-width:600px){
-                            width: 85%;
-                            top: -45%;
+                        h2{
+                            font-weight: 400;
+                            font-size: 42px;
+                            @media (max-width:767px){
+                                font-size: $font-size * 3;
+                            }
+                            @media (max-width:600px){
+                                font-size: 8vw;
+                            }
                         }
-                        &:before, &:after{
-                            position: absolute;
-                            color: $default;
-                            font-size: $font-size * 2;
-
-                        }
-                        &:before{
-                            content: "”";
-                            top: -10%;
-                            right: -30px;
-                        }
-                        &:after{
-                            content: "“";
-                            bottom: 34%;
-                            left: -35px;
+                        h4{
+                            margin-top: 40px;
+                            font-size: 22px;
                             @media (max-width:991px){
-                                bottom: 14%;
+                                font-size: $font-size * 2.6;
                             }
                             @media (max-width:767px){
-                                bottom: 20%;
+                                font-size: $font-size * 2.2;
                             }
-                        }
-                        .strong{
-                            display: inline-block;
-                            vertical-align: top;
+                            @media (max-width:600px){
+                                font-size: 4vw;
+                                margin-top: 5vw;
+                            }
                         }
                         .p{ 
                             display: inline-block;
                             text-align: justify;
                             @media (max-width:991px){
-                                width: calc(100% - 70px);
+                                font-size: $font-size * 2;
                             }
                             @media (max-width:767px){
-                                width: calc(100% - 7vw);
+                                font-size: $font-size * 1.6;
                             }
-                        }
-                        p{ 
-                            text-align: right;
-                            font-size: $font-size * 1.1;
-                            font-weight: 600;
-                            margin-top: 30px;
-                            position: relative;
-                            @media (max-width:991px){
-                                font-size: $font-size * 1.8;
-                            }
-                            @media (max-width:767px){
-                                font-size: 3.2vw;
-                            }
-                            &:before{
-                                content: "";
-                                position: absolute;
-                                width: 180px;
-                                height: 1px;
-                                background-color: $default;
-                                right: 150px;
-                                top: 50%;
-                                @media (max-width:991px){
-                                    display: none;
-                                }
+                            @media (max-width:600px){
+                                font-size: 3vw;
+                                text-shadow: 0 1px 5px rgba(255,255,255,1);
                             }
                         }
                     }
 
+                }
+            }
+        }
+        .theme-philosophy{
+            width: 100%;
+            position: relative;
+            z-index: 0;
+            background: url(../img/philosophy_bg.png) center 0 no-repeat;
+            background-size: cover;
+            padding: 0;
+            .themeContent{
+                @media (max-width:600px){
+                    width: 90%;
+                    margin: 0 auto;
+
+                }
+                .themeContent__Philosophys{
+                    h4{
+                        margin-top: 40px;
+                        font-size: 22px;
+                        text-align: center;
+                        @media (max-width:600px){
+                            font-size: 4vw;
+                            margin-top: 5vw;
+                        }
+                    }
+                    .p{ 
+                        display: inline-block;
+                        text-align: center;
+                        line-height: 1.8;
+                        @media (max-width:600px){
+                            font-size: 3vw;
+                        }
+                    }
                 }
             }
         }

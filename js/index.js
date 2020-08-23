@@ -172,5 +172,9 @@ $(document).ready(function(){
         $('.popup').removeClass('is-acted');
     });
 
+    $('.themeSelect li').click(function() {
+        $(this).toggleClass('active').siblings().removeClass("active");
+    });
+    
   });
   

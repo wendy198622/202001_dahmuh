@@ -47,10 +47,11 @@
 							<h5 class="themeFull__Title__Tel wow slideInUp" data-wow-duration="1s">禮賓專線<span>03 358 6982</span></h5>
 						</div>
 						<div class="themeFull__Title__Btn">
+							<div class="btn white-btn wow slideInUp" data-wow-duration="1s">個案介紹</div>
 							<div class="btn white-btn wow slideInUp" data-wow-duration="1s">撥打電話</div>
 							<div class="btn white-btn wow slideInUp" data-wow-duration="1s">接待中心</div>
 							<div class="btn white-btn wow slideInUp" data-wow-duration="1s"><a href="https://www.facebook.com/%E5%A4%A7%E7%9D%A6%E5%BB%BA%E8%A8%AD%E6%A9%9F%E6%A7%8B-2553463084879653/">粉絲專頁</a></div>
-							<div class="btn white-btn wow slideInUp" data-wow-duration="1s" id="openVedio">CF影片</div>
+							<!-- <div class="btn white-btn wow slideInUp" data-wow-duration="1s" id="openVedio">CF影片</div> -->
 						</div>
 					</div>
 				</div>
@@ -159,8 +160,14 @@
 											<input type="text" name="summary" id="summary" placeholder="請輸入大綱" required/>
 										</div> 
 										<div class="themeContent__Form__Item singleradio">
-											<label for="summary">想參考房型</label>
-											<div class="itemBox">
+											<label for="type">想參考房型</label>
+											<select name="type" id="type">
+												<option value="" disabled selected hidden>請選擇房型</option>
+												<option value="typeA">2房1衛</option>
+												<option value="typeB">2房2衛</option>
+												<option value="typeC">3房2衛</option>
+											</select>
+											<!-- <div class="itemBox">
 												<div class="item">
 													<input type="radio" name="group1" value="room1" id="room1">
 													<label for="room1">2房1衛</label>
@@ -176,8 +183,7 @@
 													<input type="radio" name="group1" value="room3" id="room3">
 													<label for="room3">3房2衛</label>
 												</div>
-
-											</div>
+											</div> -->
 										</div> 
 									</div>
 									<div class="col-lg-6">

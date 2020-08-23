@@ -413,7 +413,7 @@ html, body{
                 &.mob{ display: block; margin-bottom: -4px;}
             }
             .themeFull__Title{
-                width: calc(100% - 540px);
+                width: calc(100% - 570px);
                 height: 70px;
                 color: $secondary;
                 margin-top: 8%;
@@ -471,7 +471,7 @@ html, body{
                 }
             }
             .themeFull__Title__Btn{
-                width: 540px;
+                width: 570px;
                 height: 70px;
                 margin-top: 8%;
                 padding: 6px 10px;
@@ -508,7 +508,7 @@ html, body{
             }
         }
         .theme{
-            @include pd(50px 0);
+            @include pd(50px 0 0);
             position: relative;
             .themeTitle{
                 @include mg(0 auto 20px);
@@ -1351,6 +1351,16 @@ html, body{
             &.theme-current{
                 margin-bottom: 5%;
             }
+            &.engineering{
+                .banner{
+                    img.pc{ display: block;}
+                    img.mob{ display: none;}
+                    @media (max-width: 768px){
+                        img.pc{ display: none;}
+                        img.mob{ display: block;}
+                    }
+                }
+            }
             .themeIntro__engineering{
                 @media (max-width: 575px){
                     width: 96%;
@@ -1366,14 +1376,14 @@ html, body{
                             padding-left: 15px;
                             margin: 0;
                             @media (max-width: 768px){
-                                font-size: 14px;
+                                font-size: 24px;
                             }
                             &.tt{
                                 font-size: 28px;
                                 border-left: 0;
                                 padding-left: 0;
                                 @media (max-width: 768px){
-                                    font-size: 20px;
+                                    font-size: 32px;
                                 }
                             }
                         }
@@ -1397,6 +1407,12 @@ html, body{
                     }
                     .imgBox{
                         margin: 30px auto;
+                        img.pc{ display: block;}
+                        img.mob{ display: none;}
+                        @media (max-width: 768px){
+                            img.pc{ display: none;}
+                            img.mob{ display: block;}
+                        }
                     }
                     .listBox{
                         ul{
@@ -1507,6 +1523,7 @@ html, body{
                 }
                 @media (max-width:767px){
                     width: 85%;
+                    top: 40%;
                 }
                 @media (max-width:400px){
                     top: 35%;
@@ -1531,9 +1548,14 @@ html, body{
                     line-height: 1.6;
                     margin-top: 20px;
                     font-weight: 400;
+                    &.pc{ display: block;}
+                    &.mob{ display: none;}
                     @media (max-width:767px){
                         width: 100%;
-                        font-size: 3vw;
+                        font-size: 3.6vw;
+                        line-height: 2;
+                        &.pc{ display: none;}
+                        &.mob{ display: block;}
                     }
                 }
 
@@ -1608,7 +1630,7 @@ html, body{
                                 font-size: $font-size * 3;
                             }
                             @media (max-width:600px){
-                                font-size: 8vw;
+                                font-size: 6.3vw;
                             }
                         }
                         h4{
@@ -1621,7 +1643,7 @@ html, body{
                                 font-size: $font-size * 2.2;
                             }
                             @media (max-width:600px){
-                                font-size: 4vw;
+                                font-size: 4.5vw;
                                 margin-top: 5vw;
                             }
                         }
@@ -1635,7 +1657,7 @@ html, body{
                                 font-size: $font-size * 1.6;
                             }
                             @media (max-width:600px){
-                                font-size: 3vw;
+                                font-size: 3.6vw;
                                 text-shadow: 0 1px 5px rgba(255,255,255,1);
                             }
                         }
@@ -1651,31 +1673,60 @@ html, body{
             background: url(../img/philosophy_bg.png) center 0 no-repeat;
             background-size: cover;
             padding: 0;
+            .themeTitle{ margin-top: 40px;}
             .themeContent{
+                &.pc{ display: block;}
+                &.mob{ display: none;}
+                @media (max-width:768px){
+                    &.pc{ display: none;}
+                    &.mob{ display: block;}
+                }
                 @media (max-width:600px){
                     width: 90%;
                     margin: 0 auto;
 
                 }
                 .themeContent__Philosophys{
+                    margin: 0;
+                    padding: 0;
                     h4{
-                        margin-top: 40px;
+                        margin-top: 60px;
                         font-size: 22px;
                         text-align: center;
-                        @media (max-width:600px){
-                            font-size: 4vw;
-                            margin-top: 5vw;
+                        @media (max-width:768px){
+                            margin-top: 20px;
+                            font-size: 5.2vw;
                         }
                     }
                     .p{ 
                         display: inline-block;
                         text-align: center;
                         line-height: 1.8;
-                        @media (max-width:600px){
-                            font-size: 3vw;
+                        @media (max-width:768px){
+                            width: 90%;
+                            text-align: left;
+                            font-size: 3.6vw;
+                            line-height: 1.6;
+                            margin-top: 20px;
                         }
                     }
                 }
+                .fp-controlArrow.fp-prev{ 
+                    left: 0;
+                    border-color: transparent #000 transparent transparent;
+                    border-width: 20px 16px 20px 0;
+                }
+                .fp-controlArrow.fp-next{ 
+                    right: 0;
+                    border-color: transparent transparent transparent #000;
+                    border-width: 20px 0 20px  16px;
+                }
+                // #slide2{
+                //     display: none;
+                //     @media (max-width:768px){
+                //         display: block;
+                //     }
+                // }
             }
         }
 
@@ -1757,6 +1808,9 @@ html, body{
             bottom: 31px;
         }
     }
+}
+.slide .fp-tableCell{
+    vertical-align: unset;
 }
 .slider5, .slider6, .slider8, .sliderarrow{
     .slick-prev, .slick-next{

@@ -185,6 +185,12 @@ html, body {
   font-size: 14.4px;
 }
 
+@media (max-width: 400px) {
+  .wrapper header, .wrapper footer {
+    background-color: #9e7d3e;
+  }
+}
+
 .wrapper header h1, .wrapper header .copyright, .wrapper footer h1, .wrapper footer .copyright {
   height: 42px;
   display: inline-block;
@@ -2145,6 +2151,12 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
   }
 }
 
+@media (max-width: 400px) {
+  .wrapper .wrap .themeFull.aboutUs {
+    background: url(../img/mob_about_bg.png) center 0px no-repeat;
+  }
+}
+
 .wrapper .wrap .themeFull.aboutUs .themeContent {
   position: absolute;
   top: 50%;
@@ -2156,7 +2168,6 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
 @media (max-width: 991px) {
   .wrapper .wrap .themeFull.aboutUs .themeContent {
     width: 80%;
-    top: 30%;
     left: 50%;
     -webkit-transform: translateX(-50%) translateY(-50%);
             transform: translateX(-50%) translateY(-50%);
@@ -2166,13 +2177,6 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
 @media (max-width: 767px) {
   .wrapper .wrap .themeFull.aboutUs .themeContent {
     width: 85%;
-    top: 40%;
-  }
-}
-
-@media (max-width: 400px) {
-  .wrapper .wrap .themeFull.aboutUs .themeContent {
-    top: 35%;
   }
 }
 
@@ -2404,6 +2408,11 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
   margin-top: 40px;
 }
 
+.wrapper .wrap .theme-philosophy .themeContent {
+  height: auto;
+  top: unset;
+}
+
 .wrapper .wrap .theme-philosophy .themeContent.pc {
   display: block;
 }
@@ -2412,7 +2421,7 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .wrapper .wrap .theme-philosophy .themeContent.pc {
     display: none;
   }

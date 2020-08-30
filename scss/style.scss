@@ -78,8 +78,8 @@ html, body{
         background-color: rgba(158,125,62,.8);
         @include pd(21px);
         font-size: $font-size * 1.2;
-        @media (max-width:767px){
-            // background-color: rgba(158,125,62,1);
+        @media (max-width:400px){
+            background-color: rgba(158,125,62,1);
         }
         h1, .copyright{
             height: 42px;
@@ -1512,6 +1512,9 @@ html, body{
                 .pc{ display: none;}
                 .mob{ display: block;}
             }
+            @media (max-width:400px){
+                background: url(../img/mob_about_bg.png) center 0px no-repeat;
+            }
             .themeContent{
                 position: absolute;
                 top: 50%;
@@ -1519,16 +1522,16 @@ html, body{
                 text-align: left;
                 @media (max-width:991px){
                     width: 80%;
-                    top: 30%;
+                    // top: 30%;
                     left: 50%;
                     transform: translateX(-50%) translateY(-50%);
                 }
                 @media (max-width:767px){
                     width: 85%;
-                    top: 40%;
+                    // top: 40%;
                 }
                 @media (max-width:400px){
-                    top: 35%;
+                    // top: 35%;
                 }
                 .themeContent__aboutUs_title{
                     font-size: $font-size * 2;
@@ -1677,16 +1680,17 @@ html, body{
             padding: 0;
             .themeTitle{ margin-top: 40px;}
             .themeContent{
+                height: auto;
+                top: unset;
                 &.pc{ display: block;}
                 &.mob{ display: none;}
-                @media (max-width:768px){
+                @media (max-width:767px){
                     &.pc{ display: none;}
                     &.mob{ display: block;}
                 }
                 @media (max-width:600px){
                     width: 90%;
                     margin: 0 auto;
-
                 }
                 .themeContent__Philosophys{
                     margin: 0;

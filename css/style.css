@@ -1926,6 +1926,10 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
   margin-bottom: 5%;
 }
 
+.wrapper .wrap .theme.engineering .themeContent {
+  height: auto;
+}
+
 .wrapper .wrap .theme.engineering .banner img.pc {
   display: block;
 }
@@ -1958,6 +1962,13 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  .wrapper .wrap .theme .themeIntro__engineering .engineeringBlock .txtBox {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
 .wrapper .wrap .theme .themeIntro__engineering .engineeringBlock .txtBox p {
   font-size: 18px;
   border-left: 1px solid #000;
@@ -1967,7 +1978,7 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
 
 @media (max-width: 768px) {
   .wrapper .wrap .theme .themeIntro__engineering .engineeringBlock .txtBox p {
-    font-size: 24px;
+    font-size: 16px;
   }
 }
 
@@ -1979,13 +1990,21 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
 
 @media (max-width: 768px) {
   .wrapper .wrap .theme .themeIntro__engineering .engineeringBlock .txtBox p.tt {
-    font-size: 32px;
+    font-size: 21px;
+    margin-bottom: 10px;
   }
 }
 
 .wrapper .wrap .theme .themeIntro__engineering .engineeringBlock .titleBox {
   padding-top: 20px;
   overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .wrapper .wrap .theme .themeIntro__engineering .engineeringBlock .titleBox {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
 .wrapper .wrap .theme .themeIntro__engineering .engineeringBlock .titleBox > img {
@@ -2043,8 +2062,8 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
 
 @media (max-width: 768px) {
   .wrapper .wrap .theme .themeIntro__engineering .engineeringBlock .listBox ul li {
-    width: calc(95%/2);
-    margin-right: 5%;
+    width: calc(98%/2);
+    margin-right: 2%;
   }
   .wrapper .wrap .theme .themeIntro__engineering .engineeringBlock .listBox ul li:nth-child(2n) {
     margin-right: 0;

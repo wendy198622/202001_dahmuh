@@ -1354,6 +1354,9 @@ html, body{
                 margin-bottom: 5%;
             }
             &.engineering{
+                .themeContent{
+                    height: auto;
+                }
                 .banner{
                     img.pc{ display: block;}
                     img.mob{ display: none;}
@@ -1372,20 +1375,25 @@ html, body{
                     margin-top: 80px;
                     .txtBox{
                         width: 100%;
+                        @media (max-width: 768px){
+                            width: 90%;
+                            margin: 0 auto;
+                        }
                         p{
                             font-size: 18px;
                             border-left: 1px solid #000;
                             padding-left: 15px;
                             margin: 0;
                             @media (max-width: 768px){
-                                font-size: 24px;
+                                font-size: 16px;
                             }
                             &.tt{
                                 font-size: 28px;
                                 border-left: 0;
                                 padding-left: 0;
                                 @media (max-width: 768px){
-                                    font-size: 32px;
+                                    font-size: 21px;
+                                    margin-bottom: 10px;
                                 }
                             }
                         }
@@ -1393,6 +1401,10 @@ html, body{
                     .titleBox{
                         padding-top: 20px;
                         overflow: hidden;
+                        @media (max-width: 768px){
+                            width: 90%;
+                            margin: 0 auto;
+                        }
                         > img{
                             width: auto;
                             max-width: 215px;
@@ -1427,8 +1439,8 @@ html, body{
                                     margin-right: 0;
                                 }
                                 @media (max-width: 768px){
-                                    width: calc(95%/2);
-                                    margin-right: 5%;
+                                    width: calc(98%/2);
+                                    margin-right: 2%;
                                     &:nth-child(2n){
                                         margin-right: 0;
                                     }

@@ -838,7 +838,6 @@ html, body {
 .wrapper .wrap .theme .themeContent {
   width: 100%;
   position: relative;
-  height: 100vh;
 }
 
 .wrapper .wrap .theme .themeContent .themeContent__Img {

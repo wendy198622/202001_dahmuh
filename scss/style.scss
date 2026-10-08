@@ -77,7 +77,7 @@ html, body{
         display: table;
         background-color: rgba(158,125,62,.8);
         @include pd(21px);
-        font-size: $font-size * 1.2;
+        font-size: $font-size * 1.4;
         @media (max-width:400px){
             background-color: rgba(158,125,62,1);
         }
@@ -115,7 +115,7 @@ html, body{
                     a{ color: $secondary; }
                     img{
                         width: auto;
-                        height: 16px;
+                        height: 22px;
                     }
                     &:before{
                         content: "";
@@ -143,7 +143,7 @@ html, body{
         z-index: 50;
         top: 0;
         .toggle, .icon-close{ display: none;}
-        @media (max-width: 767px){
+        @media (max-width: 860px){
             .toggle{
                 width: 50px;
                 display: inline-block;
@@ -180,7 +180,7 @@ html, body{
                     transition: all .6s;
                     li{
                         width: 100%;
-                        font-size: 30px;
+                        font-size: 32px;
                         line-height: 1.6;
                         text-align: center;
                         letter-spacing: 2px;
@@ -408,6 +408,15 @@ html, body{
             }
             &.pc{ display: block; margin-bottom: -4px;}
             &.mob{ display: none;}
+            video{
+                &#video_web{ display: block;}
+                &#video_mob{ display: none;}
+
+                @media (max-width: 767px){
+                    &#video_web{ display: none;}
+                    &#video_mob{ display: block;}
+                }
+            }
             @media (max-width: 767px){
                 &.pc{ display: none;}
                 &.mob{ display: block; margin-bottom: -4px;}
@@ -1072,6 +1081,12 @@ html, body{
                     overflow: hidden;
                     a{ 
                         color: $default;
+                        .themeImg{
+                            width: 100%;
+                            height: 0;
+                            padding-bottom: 66%;
+                            overflow: hidden;
+                        }
                         .themeContent__News__Date{
                             position: absolute;
                             left: 7%;
@@ -1144,7 +1159,7 @@ html, body{
                     }
                 }
                 .themeContent__NewsIn{
-                    padding-bottom: 30px;
+                    padding-bottom: 100px;
                     margin: 0 auto;
                     display: block !important;
                     .themeContent__NewsIn__Title{
@@ -1280,6 +1295,7 @@ html, body{
                     height: 50px;
                     margin-right: 15px;
                     margin-left: 15px;
+                    background: transparent;
                     @media (max-width:991px){
                         margin-top: -10%;
                     }
@@ -1316,6 +1332,25 @@ html, body{
                             }
                         }
                     }
+                }
+                .btn_news{
+                    width: 36px;
+                    height: 36px;
+                    position: absolute;
+                    bottom: 36px;
+                    &.btn_news_prev{ left: 0;}
+                    &.btn_news_next{ right: 0;}
+                    .btn_prev, .btn_next{
+                        width: 36px;
+                        height: 36px;
+                        background-color: #000;
+                        i{
+                            color: #fff;
+                            font-size: 36px;
+                            line-height: 1;
+                        }
+                    }
+
                 }
             }
             .pagePagination{
@@ -1462,6 +1497,7 @@ html, body{
         // 首頁最新消息
         .theme-news{
             background-color: #e5e5e5;
+            @include pd(50px 0);
             .themeTitle{
                 position: relative;
                 img{ float: left;}
@@ -1514,18 +1550,19 @@ html, body{
         .themeFull.aboutUs{
             position: relative;
             z-index: 5;
-            background: url(../img/about_bg.png) center 84px no-repeat;
+            background: url(../img/about_bg.png) center bottom no-repeat;
             background-size: cover;
             .pc{ display: block;}
             .mob{ display: none;}
             @media (max-width:991px){
-                background: url(../img/mob_about_bg.png) center 84px no-repeat;
+                background: url(../img/mob_about_bg.png) center bottom no-repeat;
                 background-size: cover;
                 .pc{ display: none;}
                 .mob{ display: block;}
             }
             @media (max-width:400px){
-                background: url(../img/mob_about_bg.png) center 0px no-repeat;
+                background: url(../img/mob_about_bg.png) center bottom no-repeat;
+                background-size: cover;
             }
             .themeContent{
                 position: absolute;
@@ -1548,12 +1585,16 @@ html, body{
                 .themeContent__aboutUs_title{
                     font-size: $font-size * 2;
                     font-weight: 400;
+                    color: #fff;
+                    text-shadow: 1px 1px 2px rgba(0,0,0,1);
                         @media (max-width:767px){
                             font-size: 4.6vw;
                         }
                     h2{
                         font-weight: 500;
                         font-size: $font-size * 4;
+                        color: #fff;
+                        text-shadow: 1px 1px 2px rgba(0,0,0,1);
                         @media (max-width:767px){
                             font-size: 6.3vw;
                         }
@@ -1565,6 +1606,8 @@ html, body{
                     line-height: 1.6;
                     margin-top: 20px;
                     font-weight: 400;
+                    color: #fff;
+                    text-shadow: 1px 1px 2px rgba(0,0,0,1);
                     &.pc{ display: block;}
                     &.mob{ display: none;}
                     @media (max-width:767px){
@@ -1591,9 +1634,10 @@ html, body{
                 
             }
             p.sign{
+                width: 360px;
                 position: absolute;
                 bottom: 20px;
-                left: 47%;
+                right: 20%;
                 .pc{ display: block;}
                 .mob{ display: none;}
                 @media (max-width:991px){
@@ -1603,7 +1647,7 @@ html, body{
                     .mob{ display: block;}
                 }
                 @media (max-width:600px){
-                    width: 36%;
+                    width: 40%;
 
                 }
             }
@@ -1690,11 +1734,19 @@ html, body{
             background: url(../img/philosophy_bg.png) center 0 no-repeat;
             background-size: cover;
             padding: 0;
+            .row{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);      
+            }
             .themeTitle{ margin-top: 40px;}
             .themeContent{
                 height: auto;
                 top: unset;
-                &.pc{ display: block;}
+                &.pc{ 
+                    display: block;          
+                }
                 &.mob{ display: none;}
                 @media (max-width:767px){
                     &.pc{ display: none;}
@@ -1708,7 +1760,7 @@ html, body{
                     margin: 0;
                     padding: 0;
                     h4{
-                        margin-top: 60px;
+                        margin-top: 50px;
                         font-size: 22px;
                         text-align: center;
                         @media (max-width:768px){
@@ -1886,10 +1938,16 @@ html, body{
         }
     }
 }
+
 .slider6, .slider8, .sliderarrow{
     padding-bottom: -50px;
     & > .slick-prev, & > .slick-next{
         bottom: -32px;
+    }
+}
+.slider6{
+    & > .slick-prev, & > .slick-next{
+        bottom: 0px;
     }
 }
 .slider7{
@@ -1950,6 +2008,14 @@ html, body{
                     background-color: #fff;
                 }
             }
+        }
+    }
+}
+.slider2{
+    .slick-prev, .slick-next{
+        top: 65%;
+        @media (max-width:480px){
+            top: 70%;
         }
     }
 }
@@ -2031,4 +2097,8 @@ html, body{
         margin-top: 3px;   
         vertical-align: top;
     }
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+    background: #b19765;
 }

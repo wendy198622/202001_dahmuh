@@ -182,7 +182,7 @@ html, body {
   display: table;
   background-color: rgba(158, 125, 62, 0.8);
   padding: 21px;
-  font-size: 14.4px;
+  font-size: 16.8px;
 }
 
 @media (max-width: 400px) {
@@ -239,7 +239,7 @@ html, body {
 
 .wrapper header nav ul li img, .wrapper footer nav ul li img {
   width: auto;
-  height: 16px;
+  height: 22px;
 }
 
 .wrapper header nav ul li:before, .wrapper footer nav ul li:before {
@@ -270,7 +270,7 @@ html, body {
   display: none;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 860px) {
   .wrapper header .toggle {
     width: 50px;
     display: inline-block;
@@ -283,14 +283,14 @@ html, body {
   }
 }
 
-@media (max-width: 767px) and (max-width: 400px) {
+@media (max-width: 860px) and (max-width: 400px) {
   .wrapper header .toggle {
     width: 10vw;
     margin-top: 1vw;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 860px) {
   .wrapper header nav {
     width: 100vw;
     height: 100vh;
@@ -316,20 +316,20 @@ html, body {
   }
   .wrapper header nav ul li {
     width: 100%;
-    font-size: 30px;
+    font-size: 32px;
     line-height: 1.6;
     text-align: center;
     letter-spacing: 2px;
   }
 }
 
-@media (max-width: 767px) and (max-width: 480px) {
+@media (max-width: 860px) and (max-width: 480px) {
   .wrapper header nav ul li {
     font-size: 24px;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 860px) {
   .wrapper header nav ul li a {
     display: block;
   }
@@ -348,14 +348,14 @@ html, body {
   }
 }
 
-@media (max-width: 767px) and (max-width: 400px) {
+@media (max-width: 860px) and (max-width: 400px) {
   .wrapper header nav .icon-close {
     width: 70px;
     margin-top: 1vw;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 860px) {
   .wrapper header nav .icon-close #icon-close {
     width: 100%;
     height: 100%;
@@ -628,6 +628,23 @@ html, body {
 
 .wrapper .wrap .themeFull.mob {
   display: none;
+}
+
+.wrapper .wrap .themeFull video#video_web {
+  display: block;
+}
+
+.wrapper .wrap .themeFull video#video_mob {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .wrapper .wrap .themeFull video#video_web {
+    display: none;
+  }
+  .wrapper .wrap .themeFull video#video_mob {
+    display: block;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1559,6 +1576,13 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
   color: #1f100a;
 }
 
+.wrapper .wrap .theme .themeContent .themeContent__News a .themeImg {
+  width: 100%;
+  height: 0;
+  padding-bottom: 66%;
+  overflow: hidden;
+}
+
 .wrapper .wrap .theme .themeContent .themeContent__News a .themeContent__News__Date {
   position: absolute;
   left: 7%;
@@ -1649,7 +1673,7 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
 }
 
 .wrapper .wrap .theme .themeContent .themeContent__NewsIn {
-  padding-bottom: 30px;
+  padding-bottom: 100px;
   margin: 0 auto;
   display: block !important;
 }
@@ -1820,6 +1844,7 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
   height: 50px;
   margin-right: 15px;
   margin-left: 15px;
+  background: transparent;
 }
 
 @media (max-width: 991px) {
@@ -1871,6 +1896,33 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
   .wrapper .wrap .theme .themeContent.themeSelect .themeContent__Form__Item select {
     width: 100%;
   }
+}
+
+.wrapper .wrap .theme .themeContent .btn_news {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  bottom: 36px;
+}
+
+.wrapper .wrap .theme .themeContent .btn_news.btn_news_prev {
+  left: 0;
+}
+
+.wrapper .wrap .theme .themeContent .btn_news.btn_news_next {
+  right: 0;
+}
+
+.wrapper .wrap .theme .themeContent .btn_news .btn_prev, .wrapper .wrap .theme .themeContent .btn_news .btn_next {
+  width: 36px;
+  height: 36px;
+  background-color: #000;
+}
+
+.wrapper .wrap .theme .themeContent .btn_news .btn_prev i, .wrapper .wrap .theme .themeContent .btn_news .btn_next i {
+  color: #fff;
+  font-size: 36px;
+  line-height: 1;
 }
 
 .wrapper .wrap .theme .pagePagination {
@@ -2083,6 +2135,7 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
 
 .wrapper .wrap .theme-news {
   background-color: #e5e5e5;
+  padding: 50px 0;
 }
 
 .wrapper .wrap .theme-news .themeTitle {
@@ -2144,7 +2197,7 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
 .wrapper .wrap .themeFull.aboutUs {
   position: relative;
   z-index: 5;
-  background: url(../img/about_bg.png) center 84px no-repeat;
+  background: url(../img/about_bg.png) center bottom no-repeat;
   background-size: cover;
 }
 
@@ -2158,7 +2211,7 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
 
 @media (max-width: 991px) {
   .wrapper .wrap .themeFull.aboutUs {
-    background: url(../img/mob_about_bg.png) center 84px no-repeat;
+    background: url(../img/mob_about_bg.png) center bottom no-repeat;
     background-size: cover;
   }
   .wrapper .wrap .themeFull.aboutUs .pc {
@@ -2171,7 +2224,8 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
 
 @media (max-width: 400px) {
   .wrapper .wrap .themeFull.aboutUs {
-    background: url(../img/mob_about_bg.png) center 0px no-repeat;
+    background: url(../img/mob_about_bg.png) center bottom no-repeat;
+    background-size: cover;
   }
 }
 
@@ -2201,6 +2255,8 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
 .wrapper .wrap .themeFull.aboutUs .themeContent .themeContent__aboutUs_title {
   font-size: 24px;
   font-weight: 400;
+  color: #fff;
+  text-shadow: 1px 1px 2px black;
 }
 
 @media (max-width: 767px) {
@@ -2212,6 +2268,8 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
 .wrapper .wrap .themeFull.aboutUs .themeContent .themeContent__aboutUs_title h2 {
   font-weight: 500;
   font-size: 48px;
+  color: #fff;
+  text-shadow: 1px 1px 2px black;
 }
 
 @media (max-width: 767px) {
@@ -2226,6 +2284,8 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
   line-height: 1.6;
   margin-top: 20px;
   font-weight: 400;
+  color: #fff;
+  text-shadow: 1px 1px 2px black;
 }
 
 .wrapper .wrap .themeFull.aboutUs .themeContent .themeContent__aboutUs_desc.pc {
@@ -2267,9 +2327,10 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
 }
 
 .wrapper .wrap .theme-aboutUs p.sign {
+  width: 360px;
   position: absolute;
   bottom: 20px;
-  left: 47%;
+  right: 20%;
 }
 
 .wrapper .wrap .theme-aboutUs p.sign .pc {
@@ -2295,7 +2356,7 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
 
 @media (max-width: 600px) {
   .wrapper .wrap .theme-aboutUs p.sign {
-    width: 36%;
+    width: 40%;
   }
 }
 
@@ -2422,6 +2483,14 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
   padding: 0;
 }
 
+.wrapper .wrap .theme-philosophy .row {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 .wrapper .wrap .theme-philosophy .themeTitle {
   margin-top: 40px;
 }
@@ -2461,7 +2530,7 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
 }
 
 .wrapper .wrap .theme-philosophy .themeContent .themeContent__Philosophys h4 {
-  margin-top: 60px;
+  margin-top: 50px;
   font-size: 22px;
   text-align: center;
 }
@@ -2672,6 +2741,10 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
   bottom: -32px;
 }
 
+.slider6 > .slick-prev, .slider6 > .slick-next {
+  bottom: 0px;
+}
+
 .slider7 {
   padding-bottom: 50px;
 }
@@ -2740,6 +2813,16 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
 
 .slider1 .slick-dots li.slick-active button:before, .slider2 .slick-dots li.slick-active button:before, .slider3 .slick-dots li.slick-active button:before, .slider4 .slick-dots li.slick-active button:before, .slider9 .slick-dots li.slick-active button:before {
   background-color: #fff;
+}
+
+.slider2 .slick-prev, .slider2 .slick-next {
+  top: 65%;
+}
+
+@media (max-width: 480px) {
+  .slider2 .slick-prev, .slider2 .slick-next {
+    top: 70%;
+  }
 }
 
 .slider3 .slick-prev, .slider3 .slick-next, .slider4 .slick-prev, .slider4 .slick-next {
@@ -2846,5 +2929,9 @@ option .wrapper .wrap .theme .themeContent .themeContent__Form .themeContent__Fo
   font-size: 12px;
   margin-top: 3px;
   vertical-align: top;
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  background: #b19765;
 }
 /*# sourceMappingURL=style.css.map */
